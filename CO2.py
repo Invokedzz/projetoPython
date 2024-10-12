@@ -2,13 +2,28 @@ import inquirer
 
 def main():
 
-    questions = [
+    nameQuestion = [
+        
         inquirer.Text('name', message="Qual é o seu nome?"),
+        
     ]
 
-    answers = inquirer.prompt(questions)
+    username = inquirer.prompt(nameQuestion)
 
-    print(f"Olá, {answers['name']}! Sua cor favorita é {answers['favorite_color']}.")
+    print(f"Olá, {username['name']}! Seja bem-vindo(a).")
+    
+    servicesQuestionList = [
+        
+        inquirer.List('services', message="O que gostaria de calcular hoje?", 
+                      
+                      choices=["Emissão de CO2 para Gasolina", "Emissão de CO2 para Etanol", "Emissão de CO2 para Diesel", "Emissão de CO2 para Bio Diesel", "Emissaão de CO2 para Eletricidade"],),
+        
+    ]
+    
+    list = inquirer.prompt(servicesQuestionList)
+    
+    print(list)
+    
 
 
 if __name__ == "__main__":
