@@ -1,8 +1,16 @@
-import inquirer # type: ignore
+import inquirer
 
 def main():
-    
-    print("Hello, World!");
+
+    questions = [
+        inquirer.Text('name', message="Qual é o seu nome?"),
+    ]
+
+    answers = inquirer.prompt(questions)
+
+    print(f"Olá, {answers['name']}! Sua cor favorita é {answers['favorite_color']}.")
+
 
 if __name__ == "__main__":
+
     main()
