@@ -103,6 +103,30 @@ def emissao_etanol_anidro():
     except ValueError:
         
         print("Por favor, insira valores numéricos válidos.")
+        
+def emissao_etanol_hidratado(): 
+    
+    try:  
+        
+        distancia = int(input("Qual a distância percorrida em km? "))  
+        
+        consumo = int(input("Quantos litros foram utilizados? ")) 
+        
+        con = consumo / 100 
+        
+        litros_usados = (distancia / 100) * con 
+        
+        fator_emissao = 1.867/litros_usados 
+        
+        co2_emitido = litros_usados * fator_emissao 
+        
+        print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂") 
+        
+    except ValueError: 
+        
+        print("Por favor, insira valores numéricos válidos.")
+        
+emissao_etanol_hidratado()
 
 emissao_etanol_anidro()  
 
