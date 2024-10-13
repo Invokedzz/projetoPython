@@ -126,14 +126,3 @@ def emissao_etanol_hidratado():
         
         print("Por favor, insira valores numéricos válidos.")
         
-emissao_etanol_hidratado()
-
-emissao_etanol_anidro()  
-
-emissao_bio_diesel()
-        
-emissao_diesel()
-        
-emissao_gasolina()
-        
-calcular_emissao_eletrica()
