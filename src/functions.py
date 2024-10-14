@@ -20,9 +20,9 @@ def calcular_emissao_eletrica():
         
         if emissoes >= 100:
             
-            return print(f"A emissão total de carbono é: {emissoes:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n")
+            return console.print(f"A emissão total de carbono é: {emissoes:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n", style="bold underline red")
         
-        print(f"A emissão total de carbono é: {emissoes:.2f} kg CO₂\n")
+        console.print(f"A emissão total de carbono é: {emissoes:.2f} kg CO₂\n. Baixo nível de emissão.\n", style="bold underline green")
         
     except ValueError:        
         
@@ -30,6 +30,7 @@ def calcular_emissao_eletrica():
         
 
 def emissao_gasolina(): 
+    
     try:       
          
         distancia = int(input("Qual a distância percorrida em km? \n")) 
@@ -46,9 +47,9 @@ def emissao_gasolina():
         
         if co2_emitido >= 100:
             
-            return print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n")
+            return console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n", style="bold underline red")
         
-        print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n")
+        console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n", style="bold underline green")
 
     except ValueError:
         print("Por favor, insira valores numéricos válidos.\n")
@@ -57,6 +58,7 @@ def emissao_gasolina():
 def emissao_diesel():
     
     try:
+        
         distancia = int(input("Qual a distância percorrida em km? \n"))
         consumo = int(input("Quantos litros foram utilizados? \n"))
         
@@ -72,9 +74,9 @@ def emissao_diesel():
         
         if co2_emitido >= 100: 
             
-            return print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n") 
+            return console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n", style="bold underline red") 
         
-        print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n")
+        console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n", style="bold underline green")
 
     except ValueError:
         
@@ -101,9 +103,9 @@ def emissao_bio_diesel():
         
         if co2_emitido >= 100:
             
-            return print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n")
+            return console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n", style="bold underline red")
         
-        print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n") 
+        console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n", style="bold underline green") 
         
     except ValueError:        
         
@@ -130,9 +132,9 @@ def emissao_etanol_anidro():
         
         if co2_emitido >= 100:
             
-            return print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nivel de emissão.\n")
+            return console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nivel de emissão.\n", style="bold underline red")
         
-        print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n") 
+        console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n", style="bold underline green") 
         
     except ValueError:
         
@@ -158,9 +160,9 @@ def emissao_etanol_hidratado():
         
         if co2_emitido >= 100:
             
-            return print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n")
+            return console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n", style="bold underline red")
         
-        print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n") 
+        console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n", style="bold underline green") 
         
     except ValueError: 
         
