@@ -22,11 +22,11 @@ class main:
         
         if username['name'] == "":
             
-            console.print("Por favor, digite seu nome.")
+            console.print("Por favor, digite seu nome.", style="underline red")
             
             return await self.start() 
         
-        print(f"Olá, {username['name']}! Seja bem-vindo(a).")
+        console.print(f"Olá, {username['name']}! Seja bem-vindo(a).", style="bold underline blue")
         
 
     async def allChoices (self):
