@@ -10,7 +10,11 @@ def calcular_emissao_eletrica():
         
         emissoes = kwh_consumidos * fator_emissao 
         
+        table = [["kWh consumidos", kwh_consumidos], ["Fator de emissão", fator_emissao]]
+        
         print(f"A emissão total de carbono é: {emissoes:.2f} kg CO₂\n")
+        
+        print(tabulate(table, tablefmt="fancy_grid"))
         
     except ValueError:        
         
@@ -18,48 +22,40 @@ def calcular_emissao_eletrica():
         
 
 def emissao_gasolina(): 
-    
-    try:        
-        
+    try:       
+         
         distancia = int(input("Qual a distância percorrida em km? \n")) 
-        
         consumo = int(input("Quantos litros foram utilizados? \n"))
         
-        con = consumo / 100
+        consumo_por_km = distancia / consumo 
         
-        litros_usados = (distancia / 100) * con
-        
-        fator_emissao = 2.3/litros_usados
-        
-        co2_emitido = litros_usados * fator_emissao
+        fator_emissao = 2.3
+        co2_emitido = consumo_por_km * fator_emissao
         
         print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n")
 
     except ValueError:
-        
         print("Por favor, insira valores numéricos válidos.\n")
+
         
 def emissao_diesel():
-
-    try:        
-        
+    
+    try:
         distancia = int(input("Qual a distância percorrida em km? \n"))
-        
         consumo = int(input("Quantos litros foram utilizados? \n"))
         
-        con = consumo / 100 
+        consumo_por_km = distancia / consumo
         
-        litros_usados = (distancia / 100) * con
+        fator_emissao = 2.7
         
-        fator_emissao = 2.7 / litros_usados
-        
-        co2_emitido = litros_usados * fator_emissao
+        co2_emitido = consumo_por_km * fator_emissao 
         
         print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n")
-        
+
     except ValueError:
         
         print("Por favor, insira valores numéricos válidos.\n")
+
         
 def emissao_bio_diesel():
     
@@ -69,13 +65,11 @@ def emissao_bio_diesel():
         
         consumo = int(input("Quantos litros foram utilizados? \n"))
         
-        con = consumo / 100 
+        consumo_por_km = distancia / consumo
         
-        litros_usados = (distancia / 100) * con 
+        fator_emissao = 2.1
         
-        fator_emissao = 2.1/litros_usados 
-        
-        co2_emitido = litros_usados * fator_emissao 
+        co2_emitido = consumo_por_km * fator_emissao 
         
         print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n") 
         
@@ -92,13 +86,11 @@ def emissao_etanol_anidro():
         
         consumo = int(input("Quantos litros foram utilizados? \n"))
         
-        con = consumo / 100  
+        consumo_por_km = distancia / consumo
         
-        litros_usados = (distancia / 100) * con 
+        fator_emissao = 2.716
         
-        fator_emissao = 2.716/litros_usados
-        
-        co2_emitido = litros_usados * fator_emissao  
+        co2_emitido = consumo_por_km * fator_emissao  
         
         print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n") 
         
@@ -114,13 +106,11 @@ def emissao_etanol_hidratado():
         
         consumo = int(input("Quantos litros foram utilizados? \n")) 
         
-        con = consumo / 100 
+        consumo_por_km = distancia / consumo
         
-        litros_usados = (distancia / 100) * con 
+        fator_emissao = 1.867
         
-        fator_emissao = 1.867/litros_usados 
-        
-        co2_emitido = litros_usados * fator_emissao 
+        co2_emitido = consumo_por_km * fator_emissao 
         
         print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n") 
         
