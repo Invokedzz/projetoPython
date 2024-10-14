@@ -4,6 +4,10 @@ import inquirer
 
 import asyncio
 
+from rich.console import Console
+
+console = Console()
+
 class main: 
     
     async def start ():

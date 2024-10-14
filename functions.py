@@ -1,5 +1,9 @@
 from tabulate import tabulate
 
+from rich.console import Console
+
+console = Console()
+
 def calcular_emissao_eletrica(): 
     
     try:        
