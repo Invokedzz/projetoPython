@@ -12,13 +12,13 @@ def calcular_emissao_eletrica():
         
         table = [["kWh consumidos", kwh_consumidos], ["Fator de emissão", fator_emissao]]
         
+        print(tabulate(table, tablefmt="fancy_grid"))
+        
         if emissoes >= 100:
             
             return print(f"A emissão total de carbono é: {emissoes:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n")
         
         print(f"A emissão total de carbono é: {emissoes:.2f} kg CO₂\n")
-        
-        print(tabulate(table, tablefmt="fancy_grid"))
         
     except ValueError:        
         
@@ -35,6 +35,10 @@ def emissao_gasolina():
         
         fator_emissao = 2.3
         co2_emitido = consumo_por_km * fator_emissao
+        
+        table = [["Distância percorrida (km)", distancia], ["Quantidade de litros consumidos", consumo]]
+        
+        print(tabulate(table, tablefmt="fancy_grid"))
         
         if co2_emitido >= 100:
             
@@ -57,6 +61,10 @@ def emissao_diesel():
         fator_emissao = 2.7
         
         co2_emitido = consumo_por_km * fator_emissao
+        
+        table = [["Distância percorrida (km)", distancia], ["Quantidade de litros consumidos", consumo]]
+        
+        print(tabulate(table, tablefmt="fancy_grid"))
         
         if co2_emitido >= 100: 
             
@@ -83,6 +91,10 @@ def emissao_bio_diesel():
         
         co2_emitido = consumo_por_km * fator_emissao 
         
+        table = [["Distância percorrida (km)", distancia], ["Quantidade de litros consumidos", consumo]]
+        
+        print(tabulate(table, tablefmt="fancy_grid"))
+        
         if co2_emitido >= 100:
             
             return print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n")
@@ -108,6 +120,10 @@ def emissao_etanol_anidro():
         
         co2_emitido = consumo_por_km * fator_emissao  
         
+        table = [["Distância percorrida (km)", distancia], ["Quantidade de litros consumidos", consumo]]
+        
+        print(tabulate(table, tablefmt="fancy_grid"))
+        
         if co2_emitido >= 100:
             
             return print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nivel de emissão.\n")
@@ -131,6 +147,10 @@ def emissao_etanol_hidratado():
         fator_emissao = 1.867
         
         co2_emitido = consumo_por_km * fator_emissao 
+        
+        table = [["Distância percorrida (km)", distancia], ["Quantidade de litros consumidos", consumo]]
+        
+        print(tabulate(table, tablefmt="fancy_grid"))
         
         if co2_emitido >= 100:
             
