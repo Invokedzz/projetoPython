@@ -34,7 +34,7 @@ def calcular_emissao_eletrica():
         
     except ValueError:        
         
-        print("Por favor, insira valores numéricos válidos.\n")
+        console.print("Por favor, insira valores numéricos válidos.\n", style="underline red")
         
 
 def emissao_gasolina(): 
@@ -42,29 +42,32 @@ def emissao_gasolina():
     try:       
          
         distancia = int(input("Qual a distância percorrida em km? \n")) 
+        
         consumo = int(input("Quantos litros foram utilizados? \n"))
         
         consumo_por_km = distancia / consumo 
         
         fator_emissao = 2.3
+        
         co2_emitido = consumo_por_km * fator_emissao
         
         table = [["Distância percorrida (km)", distancia], ["Quantidade de litros consumidos", consumo]]
         
         print(tabulate(table, tablefmt="fancy_grid"))
+
+        for i in track(range(0,5), description="Calculando..."):
+            
+            time.sleep(1)
         
         if co2_emitido >= 100:
             
             return console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n", style="bold underline red")
         
-        for i in track(range(0,5), description="Calculando..."):
-            
-            time.sleep(1)
-        
         console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n", style="bold underline green")
 
     except ValueError:
-        print("Por favor, insira valores numéricos válidos.\n")
+        
+        console.print("Por favor, insira valores numéricos válidos.\n", style="underline red")
 
         
 def emissao_diesel():
@@ -72,6 +75,7 @@ def emissao_diesel():
     try:
         
         distancia = int(input("Qual a distância percorrida em km? \n"))
+        
         consumo = int(input("Quantos litros foram utilizados? \n"))
         
         consumo_por_km = distancia / consumo
@@ -84,19 +88,19 @@ def emissao_diesel():
         
         print(tabulate(table, tablefmt="fancy_grid"))
         
-        if co2_emitido >= 100: 
-            
-            return console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n", style="bold underline red")
-        
         for i in track(range(0,5), description="Calculando..."):
             
-            time.sleep(1) 
+            time.sleep(1)
+        
+        if co2_emitido >= 100: 
+            
+            return console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n", style="bold underline red") 
         
         console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n", style="bold underline green")
 
     except ValueError:
         
-        print("Por favor, insira valores numéricos válidos.\n")
+        console.print("Por favor, insira valores numéricos válidos.\n", style="underline red")
 
         
 def emissao_bio_diesel():
@@ -117,19 +121,19 @@ def emissao_bio_diesel():
         
         print(tabulate(table, tablefmt="fancy_grid"))
         
-        if co2_emitido >= 100:
-            
-            return console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n", style="bold underline red")
-        
         for i in track(range(0,5), description="Calculando..."):
             
             time.sleep(1)
+        
+        if co2_emitido >= 100:
+            
+            return console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n", style="bold underline red")
         
         console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n", style="bold underline green") 
         
     except ValueError:        
         
-        print("Por favor, insira valores numéricos válidos.\n")
+        console.print("Por favor, insira valores numéricos válidos.\n", style="underline red")
         
 
 def emissao_etanol_anidro():  
@@ -150,19 +154,19 @@ def emissao_etanol_anidro():
         
         print(tabulate(table, tablefmt="fancy_grid"))
         
-        if co2_emitido >= 100:
-            
-            return console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nivel de emissão.\n", style="bold underline red")
-        
         for i in track(range(0,5), description="Calculando..."):
             
             time.sleep(1)
+        
+        if co2_emitido >= 100:
+            
+            return console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nivel de emissão.\n", style="bold underline red")
         
         console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n", style="bold underline green") 
         
     except ValueError:
         
-        print("Por favor, insira valores numéricos válidos.\n")
+        console.print("Por favor, insira valores numéricos válidos.\n", style="underline red")
         
 def emissao_etanol_hidratado(): 
     
@@ -182,17 +186,17 @@ def emissao_etanol_hidratado():
         
         print(tabulate(table, tablefmt="fancy_grid"))
         
-        if co2_emitido >= 100:
-            
-            return console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n", style="bold underline red")
-        
         for i in track(range(0,5), description="Calculando..."):
             
             time.sleep(1)
+        
+        if co2_emitido >= 100:
+            
+            return console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n", style="bold underline red")
         
         console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n", style="bold underline green") 
         
     except ValueError: 
         
-        print("Por favor, insira valores numéricos válidos.\n")
+        console.print("Por favor, insira valores numéricos válidos.\n", style="underline red")
         
