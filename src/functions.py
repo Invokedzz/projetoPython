@@ -2,6 +2,10 @@ from tabulate import tabulate
 
 from rich.console import Console
 
+import time
+
+from rich.progress import track
+
 console = Console()
 
 def calcular_emissao_eletrica(): 
@@ -21,6 +25,10 @@ def calcular_emissao_eletrica():
         if emissoes >= 100:
             
             return console.print(f"A emissão total de carbono é: {emissoes:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n", style="bold underline red")
+
+        for i in track(range(0,5), description="Calculando..."):
+            
+            time.sleep(1)
         
         console.print(f"A emissão total de carbono é: {emissoes:.2f} kg CO₂\n. Baixo nível de emissão.\n", style="bold underline green")
         
@@ -49,6 +57,10 @@ def emissao_gasolina():
             
             return console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n", style="bold underline red")
         
+        for i in track(range(0,5), description="Calculando..."):
+            
+            time.sleep(1)
+        
         console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n", style="bold underline green")
 
     except ValueError:
@@ -74,7 +86,11 @@ def emissao_diesel():
         
         if co2_emitido >= 100: 
             
-            return console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n", style="bold underline red") 
+            return console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n", style="bold underline red")
+        
+        for i in track(range(0,5), description="Calculando..."):
+            
+            time.sleep(1) 
         
         console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n", style="bold underline green")
 
@@ -105,6 +121,10 @@ def emissao_bio_diesel():
             
             return console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n", style="bold underline red")
         
+        for i in track(range(0,5), description="Calculando..."):
+            
+            time.sleep(1)
+        
         console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n", style="bold underline green") 
         
     except ValueError:        
@@ -134,6 +154,10 @@ def emissao_etanol_anidro():
             
             return console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nivel de emissão.\n", style="bold underline red")
         
+        for i in track(range(0,5), description="Calculando..."):
+            
+            time.sleep(1)
+        
         console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n", style="bold underline green") 
         
     except ValueError:
@@ -161,6 +185,10 @@ def emissao_etanol_hidratado():
         if co2_emitido >= 100:
             
             return console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n. Considerado um alto nível de emissão.\n", style="bold underline red")
+        
+        for i in track(range(0,5), description="Calculando..."):
+            
+            time.sleep(1)
         
         console.print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n", style="bold underline green") 
         
