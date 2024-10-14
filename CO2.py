@@ -20,24 +20,38 @@ class main:
             
             print("Por favor, digite seu nome.")
             
-            return main.start()  # Chama novamente a função se o nome estiver vazio.
+            return main.start() 
         
         print(f"Olá, {username['name']}! Seja bem-vindo(a).")
         
 
     async def allChoices ():
+     
         
         await main.start()
-        
+    
+    while True:
+            
         servicesQuestionList = [
             
             inquirer.List('services', message="O que gostaria de calcular hoje?", 
-                          choices=["Emissão de CO2 para Gasolina", 
+                          choices=[
+                              
+                                   "Emissão de CO2 para Gasolina",
+                                    
                                    "Emissão de CO2 para Etanol (anidro)",
-                                   "Emissão de CO2 para Etanol (hidratado)", 
+                                   
+                                   "Emissão de CO2 para Etanol (hidratado)",
+                                    
                                    "Emissão de CO2 para Diesel", 
+                                   
                                    "Emissão de CO2 para Bio Diesel", 
-                                   "Emissão de CO2 para Eletricidade"]),
+                                   
+                                   "Emissão de CO2 para Eletricidade",
+                                   
+                                   "Sair",
+                                   
+                                   ]),
             
         ]
         
@@ -66,6 +80,12 @@ class main:
         if selected_service['services'] == "Emissão de CO2 para Eletricidade":
             
             functions.calcular_emissao_eletrica()
+            
+        if selected_service['services'] == "Sair":
+            
+            print("Obrigado por utilizar nosso sistema!")
+            
+            break
         
 if __name__ == "__main__":
     

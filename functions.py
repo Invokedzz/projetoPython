@@ -1,27 +1,29 @@
+from tabulate import tabulate
+
 def calcular_emissao_eletrica(): 
     
     try:        
         
-        kwh_consumidos = float(input("Informe a quantidade de eletricidade consumida (em kWh): "))
+        kwh_consumidos = float(input("Informe a quantidade de eletricidade consumida (em kWh): \n"))
         
-        fator_emissao = float(input("Informe o fator de emissão de carbono (em kg CO₂ por kWh): "))
+        fator_emissao = float(input("Informe o fator de emissão de carbono (em kg CO₂ por kWh): \n"))
         
         emissoes = kwh_consumidos * fator_emissao 
         
-        print(f"A emissão total de carbono é: {emissoes:.2f} kg CO₂")
+        print(f"A emissão total de carbono é: {emissoes:.2f} kg CO₂\n")
         
     except ValueError:        
         
-        print("Por favor, insira valores numéricos válidos.")
+        print("Por favor, insira valores numéricos válidos.\n")
         
 
 def emissao_gasolina(): 
     
     try:        
         
-        distancia = int(input("Qual a distância percorrida em km? ")) 
+        distancia = int(input("Qual a distância percorrida em km? \n")) 
         
-        consumo = int(input("Quantos litros foram utilizados? "))
+        consumo = int(input("Quantos litros foram utilizados? \n"))
         
         con = consumo / 100
         
@@ -31,19 +33,19 @@ def emissao_gasolina():
         
         co2_emitido = litros_usados * fator_emissao
         
-        print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂")
+        print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n")
 
     except ValueError:
         
-        print("Por favor, insira valores numéricos válidos.")
+        print("Por favor, insira valores numéricos válidos.\n")
         
 def emissao_diesel():
 
     try:        
         
-        distancia = int(input("Qual a distância percorrida em km? "))
+        distancia = int(input("Qual a distância percorrida em km? \n"))
         
-        consumo = int(input("Quantos litros foram utilizados? "))
+        consumo = int(input("Quantos litros foram utilizados? \n"))
         
         con = consumo / 100 
         
@@ -53,19 +55,19 @@ def emissao_diesel():
         
         co2_emitido = litros_usados * fator_emissao
         
-        print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂")
+        print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n")
         
     except ValueError:
         
-        print("Por favor, insira valores numéricos válidos.")
+        print("Por favor, insira valores numéricos válidos.\n")
         
 def emissao_bio_diesel():
     
     try:
         
-        distancia = int(input("Qual a distância percorrida em km? "))
+        distancia = int(input("Qual a distância percorrida em km? \n"))
         
-        consumo = int(input("Quantos litros foram utilizados? "))
+        consumo = int(input("Quantos litros foram utilizados? \n"))
         
         con = consumo / 100 
         
@@ -75,20 +77,20 @@ def emissao_bio_diesel():
         
         co2_emitido = litros_usados * fator_emissao 
         
-        print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂") 
+        print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n") 
         
     except ValueError:        
         
-        print("Por favor, insira valores numéricos válidos.")
+        print("Por favor, insira valores numéricos válidos.\n")
         
 
 def emissao_etanol_anidro():  
       
     try:   
         
-        distancia = int(input("Qual a distância percorrida em km? "))
+        distancia = int(input("Qual a distância percorrida em km? \n"))
         
-        consumo = int(input("Quantos litros foram utilizados? "))
+        consumo = int(input("Quantos litros foram utilizados? \n"))
         
         con = consumo / 100  
         
@@ -98,19 +100,19 @@ def emissao_etanol_anidro():
         
         co2_emitido = litros_usados * fator_emissao  
         
-        print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂") 
+        print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n") 
         
     except ValueError:
         
-        print("Por favor, insira valores numéricos válidos.")
+        print("Por favor, insira valores numéricos válidos.\n")
         
 def emissao_etanol_hidratado(): 
     
     try:  
         
-        distancia = int(input("Qual a distância percorrida em km? "))  
+        distancia = int(input("Qual a distância percorrida em km? \n"))  
         
-        consumo = int(input("Quantos litros foram utilizados? ")) 
+        consumo = int(input("Quantos litros foram utilizados? \n")) 
         
         con = consumo / 100 
         
@@ -120,9 +122,9 @@ def emissao_etanol_hidratado():
         
         co2_emitido = litros_usados * fator_emissao 
         
-        print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂") 
+        print(f"A emissão total de carbono é: {co2_emitido:.2f} kg CO₂\n") 
         
     except ValueError: 
         
-        print("Por favor, insira valores numéricos válidos.")
+        print("Por favor, insira valores numéricos válidos.\n")
         
