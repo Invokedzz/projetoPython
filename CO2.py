@@ -12,7 +12,7 @@ def main():
     
     if username['name'] == "":
         print("Por favor, digite seu nome.")
-        return main()  # Chama novamente a função se o nome estiver vazio.
+        return main() 
     
     print(f"Olá, {username['name']}! Seja bem-vindo(a).")
 
