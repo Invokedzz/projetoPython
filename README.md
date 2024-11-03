@@ -35,3 +35,26 @@ python3 src/CO2.py
 
 ```
 
+<h2>Ah, mas o pip3/python3 aparentemente não funcionam!</h2>
+
+<p>Lembrando: pip3 e python3 seriam comandos executáveis para o sistema MacOS (sistema em que este programa foi criado).</p>
+
+<p>Para sistemas como Windows, execute os seguintes comandos: </p>
+
+```
+pip install inquirer
+
+pip install tabulate
+
+pip install rich
+
+```
+
+<p>E, para executar o código em sua máquina: </p>
+
+```
+
+python src/CO2.py
+
+```
+
